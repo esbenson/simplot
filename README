@@ -28,7 +28,8 @@ extra:
 	distributions that are hard-coded into simplot.js and appear as drop-down 
 	menu options in the app under "probability distributions"
 
-
+required but not included here:
+* jquery, jquery-ui, jquery-sparkline
 
 
 
