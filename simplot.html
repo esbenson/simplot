@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SIMPLOT</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ 
+<!-- local  -->
+<link rel="stylesheet" type="text/css" href="simplot.css" />
+<link rel="stylesheet" href="jquery-ui.css">
+<script src="jquery-1.9.1.min.js"></script>
+<script src="jquery-ui-1.10.1.custom.js"></script>
+<script src="simplot.js"></script>
+<script src="jquery.sparkline.min.js"></script>
+
+<!-- production 
+<link rel="stylesheet" href="http://www.etiennebenson.com/simplot/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="http://www.etiennebenson.com/simplot/simplot.css" />
+<script src="http://www.etiennebenson.com/simplot/jquery-1.9.1.min.js"></script>
+<script src="http://www.etiennebenson.com/simplot/jquery-ui-1.10.1.custom.js"></script>
+<script src="http://www.etiennebenson.com/simplot/simplot.js"></script> 
+<script src="http://www.etiennebenson.com/simplot/jquery.sparkline.min.js"></script>
+-->
+</head>
+
+<body>
+
+<div id="header">
+<div id="title"><h1>SIMPLOT</h1></div>
+<div id="subhead"><h3>A re-enactment of an antique animal movement simulator.</h3>
+<!-- A Javascript re-enactment of SIMPLOT, an animal movement
+simulator written in 1967 in FORTRAN, on punchcards, for the CDC 1604, by 
+University of Minnesota biologist Donald B. Siniff. Click "<strong>Run 
+Simulation</strong>" to get started. 
+-->
+</div>
+</div>
+
+
+<div id="simulator">
+
+    <!-- canvas for plotting -->
+    <div id="plotframe">
+        <canvas id="plotcanvas" width="600" height="600"></canvas>
+    </div>
+    
+    <!-- controls -->
+    <div id="controlframe">
+    
+    <div id="majoroptions">
+
+        <div id="runclearblock">
+            <input type="button" id="run" value="Run Simulation"/>
+    	    <span id="progressbar"></span>
+	        <div id="message">&nbsp;</div>
+		</div>
+      
+        <div id="positionsblock">
+            Number of positions to run: <input type="text" name="maxpositions" value="500" size="10"></input> 
+        </div>
+        
+        
+      <div id="plotsizeblock">
+            Plot size:</br> 
+          <input type="radio" name="plotsize" value="300x300">small</input> 
+          <input type="radio" name="plotsize" value="600x600" checked="checked">medium</input>
+            <input type="radio" name="plotsize" value="900x900" >large</input> 
+            <input type="radio" name="plotsize" value="1200x1200" >extra large</input>             
+        </div>
+      
+        <div id="linetypeblock">
+            Plot style:</br> 
+            <input type="radio" name="linetype" value="linecross" checked="checked">line and cross</input> 
+          <input type="radio" name="linetype" value="line">line</input>
+          <input type="radio" name="linetype" value="cross">cross</input> 
+        </div>
+        
+            <div id="plotspeedblock">
+            Plotting speed:</br> 
+          <input type="radio" name="plotspeed" value="instant">instantaneous</input> 
+          <input type="radio" name="plotspeed" value="fast" checked="checked">fast</input>
+            <input type="radio" name="plotspeed" value="medium">medium</input> 
+            <input type="radio" name="plotspeed" value="slow">slow</input> 
+            
+        </div>
+
+        <div id="showoriginblock">
+            Show origin: <input type="checkbox" name="showorigin"></input> 
+        </div>
+        
+        <div id="showscaleblock">
+            Show scale: <input type="checkbox" name="showscale" checked="checked"></input> 
+        </div>
+
+
+    </div>  
+
+      
+	<div id="showadvanced">Advanced options >></div>
+    <div id="advancedoptions" style="display:none">
+        <div id="startingcoordsblock">
+            Starting coordinates (miles):<br/>
+            x <input type="text" name="x_start" value="0" size="10"></input> 
+            y <input type="text" name="y_start" value="0" size="10"></input>
+        </div>        <div id="intervalblock">
+            Interval between positions (minutes): <input type="text" name="minutesbetween" value="1"  size="5"></input> 
+        </div>
+        <div id="distmultipleblock">
+            Move in multiples of:</br>  
+            <input type="radio" name="distmultiple" value="25feet" checked="checked">25 feet</input> 
+            <input type="radio" name="distmultiple" value="50feet">50 feet</input> 
+        </div>
+            <div id="beginperiodblock">
+            Start with:<br/> 
+            <input type="radio" name="beginperiod" value="move" checked="checked"><label for="move">movement period</label></input>
+            <input type="radio" name="beginperiod" value="rest"><label for="rest">rest period</label></input>
+        </div>
+        
+        <div id="mapscaleblock">
+            Map scale no smaller than (per 'inch'): <br/>
+            <input type="radio" name="mapscale" value=".076" checked="checked">400 feet</input> 
+            <input type="radio" name="mapscale" value=".25">0.25 miles</input> 
+            <input type="radio" name="mapscale" value=".50">0.50 miles</input> 
+            <input type="radio" name="mapscale" value="1.0">1.0 mile</input> 
+        </div>
+
+       	 <div id="plotcolorblock">
+			Background: <input type="color" id="background" value="#eeffee"></input> 
+			Foreground: <input type="color" id="foreground" value="#000000"></input>
+        </div>
+
+
+    </div>
+             
+	<div id="showdistribs">Probability distributions >></div>
+		<div id="distributiongraphs">
+		<select id="distribselect">
+		</select>
+		<div id="move"><div id="move_distr"></div><div id="move_label">movement</div></div>  
+		<div id="rest"><div id="rest_distr"></div><div id="rest_label">rest</div></div>  
+		<div id="distance"><div id="dist_distr"></div><div id="dist_label">distance</div></div> 
+		<div id="angle"><div id="ang_distr"></div><div id="ang_label">angle</div></div>  
+	</div> 
+    
+    
+     <div id="showstatistics" >Statistics >></div>
+  	   <div id="statistics" style="display:none">Statistics will be generated after 
+  	   simulation is run.</div>
+     </div>
+
+    
+    </div>
+
+</div>
+
+</body>
+
+</html>

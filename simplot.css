@@ -1,0 +1,204 @@
+
+body {
+    font-family:monospace;
+}
+
+#header {
+position:absolute;
+width:800px;
+left:0px;
+top:0px;
+	margin:0;
+}
+
+#showoriginblock {
+display:inline-block;
+}
+
+#showscaleblock {
+display:inline-block;
+}
+
+#title h1 {
+position:relative;
+left:20px;
+top:0px;
+}
+
+#subhead h3 {
+	position:relative;
+	left:30px;
+	width:300px;
+	top:-20px;
+    font-weight:normal;
+    font-size: 12px;
+//	display:none;
+}
+
+#progressbar {
+	height:10px;
+	width:160px;
+	padding:0;
+	display:inline-block;
+}
+
+
+div {
+    font-family:monospace;
+    margin:10px 0px 10px 0px;
+}
+
+
+#message {
+    color:#a00;
+    margin:5px 5px 0px 10px;
+    font-size: 10px;
+}
+
+#showdistribs {
+   color:#aaa;
+    font-size:12px;
+	margin:20px 0 0 0;
+	cursor:default;
+}
+
+#distributiongraphs {
+	margin:0 0 0 0;
+}
+
+#plotstatus {
+    color:#a00;
+}
+
+
+#simulator {
+    position:absolute;
+	left:10px;
+	top:40px;
+    border-style: solid black 1px;
+    margin:10px;
+}
+
+#controlframe {
+    position:absolute;
+	left:0px;
+	top:20px;
+	width:300px;
+    text-align:left;
+}
+
+#showadvanced {
+    color:#aaa;
+    font-size:12px;
+	margin:20px 0 0 0;
+	cursor:default;
+}
+
+#advancedoptions {
+    margin:20px 0 0 20px;
+    color:#000;
+    font-size:10px;
+}
+
+#statistics {
+    margin:20px 0 20px 20px;
+    color:#000;
+    font-size:10px;
+}
+
+#showstatistics {
+    color:#aaa;
+    font-size:12px;
+	margin:20px 0 0 0;
+	cursor:default;
+}
+
+#plotframe {
+    position:absolute;
+	left:360px;
+	top:-40px;
+}
+
+
+#plotcanvas {
+    width:600px;
+    height:600px;
+}
+
+#runclearblock {
+    font-size:14px;
+    margin:10px 0 0px 0;
+    display:inline-block;
+}
+
+
+#stopblock {
+    font-size:14px;
+    margin:0 0 10px 0;
+	display:inline-block;
+}
+    
+#clear {
+    font-family:monospace;
+   font-size:20px;
+}
+
+#run {
+    font-family:monospace;
+   font-size:14px;
+}
+
+#stop {
+   font-family:monospace;
+   font-size:20px;
+}
+
+input, select, button {
+    font-family:inherit;
+    font-size:inherit:
+}
+
+#background {
+width:50px;
+height:20px;
+}
+#foreground {
+width:50px;
+height:20px;
+}
+
+#distributiongraphs {
+	height:160px;
+	position:relative;
+	left:20px;
+	margin:10px 0 10px 0;
+	font-size:10px;
+}
+
+#move {
+position:relative;
+left:0px;
+top:0px;
+height:30px;
+}
+
+#rest {
+position:relative;
+left:100px;
+top:-40px;
+height:30px;
+}
+
+#distance {
+position:relative;
+left:0px;
+top:-20px;
+height:30px;}
+
+#angle {
+position:relative;
+left:100px;
+top:-60px;
+height:30px;}
+
+
