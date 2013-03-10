@@ -28,12 +28,13 @@ extra:
 	distributions that are hard-coded into simplot.js and appear as drop-down 
 	menu options in the app under "probability distributions"
 
+
 required but not included here:
 * jquery, jquery-ui, jquery-sparkline
 
 
 
-Copyright (C) Etienne S. Benson	
+Copyright (C) Etienne S. Benson, esbenson@gmail.com
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
