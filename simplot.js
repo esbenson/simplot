@@ -17,9 +17,13 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+
+
+	note - "clog" is alias for "console.log"
+
 */
 
-var continuous = false;
+
 var timeoutID = null;
 window.onload = main;
 
@@ -47,7 +51,7 @@ function clearPlot (params) {
 // =============================================================
 // -------- initialize controls --------------------------------
 function initializeControls(params) {
-    // run     and stop
+    // run     and stop and progress
     $("#run").on('click', params, runSimulation);
     $("#stopblock").css("visibility", "visible");
     $("#stop").on('click', function () {
@@ -249,8 +253,6 @@ function initializeControls(params) {
 				clearPlot(params);
         });   
      
-    // to add: select distributions from dropdown, and display them graphically
-        
     return;
 }
 

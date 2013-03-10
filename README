@@ -1,17 +1,20 @@
 An animal movement simulator inspired by University of Minnesota biologist Donald 
-B. Siniff's PROGRAM SIMPLOT, 1967. 
+B. Siniff's Program SIMPLOT, 1967. 
 
-Siniff's goal was to better understand how and why patterns of animal movement, as 
-tracked by the automatic radio-tracking system he helped to build, differed from 
-species to species and from time to time. 
+Siniff's goal was to gain a better understanding of how and why patterns of animal 
+movement differed from species to species and from time to time. This effort was closely
+tied to the development of a groundbreaking automatic wildlife radio-tracking system at
+the Cedar Creek Natural History Area by Siniff and his colleagues.
 
-The goal of this program is to better understand why Siniff and other wildlife biologists
-of his generation approached the study of animal behavior and ecology the way they
-did. 
+My goal in writing this program was to better understand why wildlife  biologists in
+the 1960s approached the study of animal behavior and ecology the way they did, and to 
+provide a playful, interactive way for others to get a feel for the practices and 
+aesthetics of the wildlife biology of that time.
 
-The simulation logic and aesthetic of this version are modeled after Siniff's original 
-FORTRAN code, as published in his 1967 dissertation; the language, interface and output 
-medium are quite a bit different. 
+The simulation logic and aesthetic of this version are modeled as closely as possible on
+the original version, as described in Siniff's 1967 dissertation. The language 
+(Javascript instead of FORTRAN), input interface (web browser vs. punch cards) and output 
+medium (HTML5 Canvas on screen vs. vector plotter on paper) are quite a bit different.
 
 Running at:
 http://etiennebenson.com/simplot/
@@ -22,15 +25,17 @@ core:
 * simplot.html -- html code for controls and canvas
 * simplot.css -- styling
 
-
 extra:
-* angle-dists.py -- python code to generate circular normal (Von Mises) 
+* angle-dists.py -- python hack ... er, code to generate circular normal (Von Mises) 
 	distributions that are hard-coded into simplot.js and appear as drop-down 
-	menu options in the app under "probability distributions"
-
+	menu options in the app under "probability distributions". python was used because
+	the von mises distribution is included as part of the standard "random" library
 
 required but not included here:
 * jquery, jquery-ui, jquery-sparkline
+
+browser requirements:
+* HTML5 Canvas support
 
 
 
