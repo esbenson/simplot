@@ -10,6 +10,9 @@ The simulation logic and aesthetic of this version are modeled after Siniff's or
 FORTRAN code, as published in his 1967 dissertation; the language, interface and output 
 medium are quite a bit different. 
 
+Running at:
+http://etiennebenson.com/simplot/
+
 
 core:
 * simplot.js -- javascript for controls, simulation, and plotting
