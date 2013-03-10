@@ -1,0 +1,28 @@
+An animal movement simulator inspired by University of Minnesota biologist Donald 
+B. Siniff's PROGRAM SIMPLOT, 1967. Siniff's goal was to better understand how and
+why patterns of animal movement, as tracked by the automatic radio-tracking system
+he helped to build, differed from species to species and from time to time. The
+goal of this program is to better understand why Siniff and other wildlife biologists
+of his generation approached the study of animal behavior and ecology the way they
+did. 
+
+The simulation logic and aesthetic of this version are modeled after Siniff's original 
+FORTRAN code; the language, interface and output medium are quite a bit different. 
+
+
+
+
+Copyright (C) Etienne S. Benson	
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
