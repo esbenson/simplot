@@ -17,9 +17,9 @@ the original version, as described in Siniff's 1967 dissertation:
 	Donald Blair Siniff. (1967). A simulation model of animal movement patterns. Ph.D. 
 	thesis, University of Minnesota.
 
-However, the coding language (Javascript, with an assist from Python assist, vs.  
-FORTRAN), input interface (web browser vs. punch cards) and output medium (HTML5 Canvas 
-on screen vs. vector plotter on paper) are quite a bit different. 
+However, the coding language (Javascript, with an assist from Python, vs.  FORTRAN), 
+input interface (web browser vs. punch cards) and output medium (HTML5 Canvas on screen 
+vs. vector plotter on paper) are quite a bit different. 
 
 Running example at: 
 http://etiennebenson.com/simplot/
