@@ -1,25 +1,31 @@
 An animal movement simulator inspired by University of Minnesota biologist Donald 
-B. Siniff's Program SIMPLOT, 1967. 
+B. Siniff's Program SIMPLOT, 1967.
 
 Siniff's goal was to gain a better understanding of how and why patterns of animal 
-movement differed from species to species and from time to time. This effort was closely
+movement differed from species to species and from time to time. His effort was closely
 tied to the development of a groundbreaking automatic wildlife radio-tracking system at
-the Cedar Creek Natural History Area by Siniff and his colleagues.
+the Cedar Creek Natural History Area. 
 
-My goal in writing this program was to better understand why wildlife  biologists in
-the 1960s approached the study of animal behavior and ecology the way they did, and to 
-provide a playful, interactive way for others to get a feel for the practices and 
-aesthetics of the wildlife biology of that time.
+My goal in writing this program was to better understand why wildlife biologists in
+the 1960s approached the study of animal behavior and ecology the way they did. I also
+wanted to provide a playful, interactive way for others to get a feel for the practices 
+and aesthetics of the wildlife biology of that time.
 
 The simulation logic and aesthetic of this version are modeled as closely as possible on
-the original version, as described in Siniff's 1967 dissertation. The language 
-(Javascript instead of FORTRAN), input interface (web browser vs. punch cards) and output 
-medium (HTML5 Canvas on screen vs. vector plotter on paper) are quite a bit different.
+the original version, as described in Siniff's 1967 dissertation:
 
-Running at:
+	Donald Blair Siniff. (1967). A simulation model of animal movement patterns. Ph.D. 
+	thesis, University of Minnesota.
+
+However, the coding language (Javascript, with an assist from Python assist, vs.  
+FORTRAN), input interface (web browser vs. punch cards) and output medium (HTML5 Canvas 
+on screen vs. vector plotter on paper) are quite a bit different. 
+
+Running example at: 
 http://etiennebenson.com/simplot/
 
 
+FILES:
 core:
 * simplot.js -- javascript for controls, simulation, and plotting
 * simplot.html -- html code for controls and canvas
@@ -31,8 +37,11 @@ extra:
 	menu options in the app under "probability distributions". python was used because
 	the von mises distribution is included as part of the standard "random" library
 
-required but not included here:
-* jquery, jquery-ui, jquery-sparkline
+required libraries:
+* jquery
+* jquery-ui
+* jquery-sparkline
+
 
 browser requirements:
 * HTML5 Canvas support
